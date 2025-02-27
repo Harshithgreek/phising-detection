@@ -1,0 +1,354 @@
+2025-02-15 12:07:35,968 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.137.208:5000
+2025-02-15 12:07:35,969 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-15 12:07:35,972 - werkzeug - INFO -  * Restarting with stat
+2025-02-15 12:07:39,072 - werkzeug - WARNING -  * Debugger is active!
+2025-02-15 12:07:39,082 - werkzeug - INFO -  * Debugger PIN: 141-253-352
+2025-02-15 12:07:53,630 - werkzeug - INFO - 127.0.0.1 - - [15/Feb/2025 12:07:53] "GET / HTTP/1.1" 200 -
+2025-02-15 12:07:53,850 - werkzeug - INFO - 127.0.0.1 - - [15/Feb/2025 12:07:53] "GET /static/style.css HTTP/1.1" 200 -
+2025-02-15 12:07:53,881 - werkzeug - INFO - 127.0.0.1 - - [15/Feb/2025 12:07:53] "GET /static/script.js HTTP/1.1" 200 -
+2025-02-15 12:08:03,743 - werkzeug - INFO - 127.0.0.1 - - [15/Feb/2025 12:08:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-15 12:08:27,793 - feature_extractor - ERROR - Error getting domain features: No match for "COM-REDIRECT@VALIMAIL.COM".
+>>> Last update of whois database: 2025-02-15T06:38:08Z <<<
+
+NOTICE: The expiration date displayed in this record is the date the
+registrar's sponsorship of the domain name registration in the registry is
+currently set to expire. This date does not necessarily reflect the expiration
+date of the domain name registrant's agreement with the sponsoring
+registrar.  Users may consult the sponsoring registrar's Whois database to
+view the registrar's reported date of expiration for this registration.
+
+TERMS OF USE: You are not authorized to access or query our Whois
+database through the use of electronic processes that are high-volume and
+automated except as reasonably necessary to register domain names or
+modify existing registrations; the Data in VeriSign Global Registry
+Services' ("VeriSign") Whois database is provided by VeriSign for
+information purposes only, and to assist persons in obtaining information
+about or related to a domain name registration record. VeriSign does not
+guarantee its accuracy. By submitting a Whois query, you agree to abide
+by the following terms of use: You agree that you may use this Data only
+for lawful purposes and that under no circumstances will you use this Data
+to: (1) allow, enable, or otherwise support the transmission of mass
+unsolicited, commercial advertising or solicitations via e-mail, telephone,
+or facsimile; or (2) enable high volume, automated, electronic processes
+that apply to VeriSign (or its computer systems). The compilation,
+repackaging, dissemination or other use of this Data is expressly
+prohibited without the prior written consent of VeriSign. You agree not to
+use electronic processes that are automated and high-volume to access or
+query the Whois database except as reasonably necessary to register
+domain names or modify existing registrations. VeriSign reserves the right
+to restrict your access to the Whois database in its sole discretion to ensure
+operational stability.  VeriSign may restrict or terminate your access to the
+Whois database for failure to abide by these terms of use. VeriSign
+reserves the right to modify these terms at any time.
+
+The Registry database contains ONLY .COM, .NET, .EDU domains and
+Registrars.
+
+2025-02-15 12:08:36,566 - werkzeug - INFO - 127.0.0.1 - - [15/Feb/2025 12:08:36] "POST /analyze HTTP/1.1" 200 -
+2025-02-15 12:09:56,078 - werkzeug - INFO - 127.0.0.1 - - [15/Feb/2025 12:09:56] "[31m[1mPOST /analyze HTTP/1.1[0m" 400 -
+2025-02-15 12:10:10,351 - feature_extractor - ERROR - Error getting HTML features: HTTPConnectionPool(host='www.amazon-update.com', port=80): Max retries exceeded with url: /login.php (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x0000026F231E9790>: Failed to resolve 'www.amazon-update.com' ([Errno 11001] getaddrinfo failed)"))
+2025-02-15 12:10:10,365 - werkzeug - INFO - 127.0.0.1 - - [15/Feb/2025 12:10:10] "POST /analyze HTTP/1.1" 200 -
+2025-02-15 12:13:40,031 - werkzeug - INFO -  * Detected change in 'C:\\Users\\nikhi\\OneDrive\\Desktop\\Phishing-Detection-Advanced\\train_model.py', reloading
+2025-02-15 12:13:40,423 - werkzeug - INFO -  * Restarting with stat
+2025-02-15 12:13:44,217 - werkzeug - WARNING -  * Debugger is active!
+2025-02-15 12:13:44,237 - werkzeug - INFO -  * Debugger PIN: 141-253-352
+2025-02-15 12:14:53,911 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.137.208:5000
+2025-02-15 12:14:53,916 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-15 12:14:53,918 - werkzeug - INFO -  * Restarting with stat
+2025-02-15 12:14:57,196 - werkzeug - WARNING -  * Debugger is active!
+2025-02-15 12:14:57,208 - werkzeug - INFO -  * Debugger PIN: 438-716-506
+2025-02-15 12:15:20,169 - werkzeug - INFO - 127.0.0.1 - - [15/Feb/2025 12:15:20] "POST /analyze HTTP/1.1" 200 -
+2025-02-15 12:15:25,140 - werkzeug - INFO - 127.0.0.1 - - [15/Feb/2025 12:15:25] "POST /analyze HTTP/1.1" 200 -
+2025-02-15 12:15:29,851 - werkzeug - INFO - 127.0.0.1 - - [15/Feb/2025 12:15:29] "POST /analyze HTTP/1.1" 200 -
+2025-02-15 12:15:33,064 - feature_extractor - ERROR - Error getting HTML features: HTTPConnectionPool(host='googgle.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x0000022CA1CD0C10>: Failed to resolve 'googgle.com' ([Errno 11001] getaddrinfo failed)"))
+2025-02-15 12:15:33,084 - werkzeug - INFO - 127.0.0.1 - - [15/Feb/2025 12:15:33] "POST /analyze HTTP/1.1" 200 -
+2025-02-15 12:15:36,422 - feature_extractor - ERROR - Error getting HTML features: HTTPConnectionPool(host='paypal.secure.com.suspicious.domain.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x0000022CA2FE0610>: Failed to resolve 'paypal.secure.com.suspicious.domain.com' ([Errno 11001] getaddrinfo failed)"))
+2025-02-15 12:15:36,442 - werkzeug - INFO - 127.0.0.1 - - [15/Feb/2025 12:15:36] "POST /analyze HTTP/1.1" 200 -
+2025-02-15 12:15:41,824 - feature_extractor - ERROR - Error getting HTML features: HTTPConnectionPool(host='182.168.1.1', port=80): Max retries exceeded with url: /login.php (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000022CA2FE2210>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-02-15 12:15:41,841 - werkzeug - INFO - 127.0.0.1 - - [15/Feb/2025 12:15:41] "POST /analyze HTTP/1.1" 200 -
+2025-02-15 12:15:43,877 - werkzeug - INFO - 127.0.0.1 - - [15/Feb/2025 12:15:43] "[31m[1mPOST /analyze HTTP/1.1[0m" 400 -
+2025-02-15 12:15:48,277 - feature_extractor - ERROR - Error getting HTML features: HTTPSConnectionPool(host='very-long-subdomain.many.levels.deep.example.com', port=443): Max retries exceeded with url: /path?param=value (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000022CA2FEFD10>: Failed to resolve 'very-long-subdomain.many.levels.deep.example.com' ([Errno 11001] getaddrinfo failed)"))
+2025-02-15 12:15:48,303 - werkzeug - INFO - 127.0.0.1 - - [15/Feb/2025 12:15:48] "POST /analyze HTTP/1.1" 200 -
+2025-02-15 12:16:12,547 - werkzeug - INFO -  * Detected change in 'C:\\Users\\nikhi\\OneDrive\\Desktop\\Phishing-Detection-Advanced\\test_urls.py', reloading
+2025-02-15 12:16:12,590 - werkzeug - INFO -  * Detected change in 'C:\\Users\\nikhi\\OneDrive\\Desktop\\Phishing-Detection-Advanced\\test_urls.py', reloading
+2025-02-15 12:16:12,987 - werkzeug - INFO -  * Restarting with stat
+2025-02-15 12:16:13,179 - werkzeug - INFO -  * Restarting with stat
+2025-02-15 12:16:17,039 - werkzeug - WARNING -  * Debugger is active!
+2025-02-15 12:16:17,052 - werkzeug - INFO -  * Debugger PIN: 438-716-506
+2025-02-15 12:16:17,104 - werkzeug - WARNING -  * Debugger is active!
+2025-02-15 12:16:17,115 - werkzeug - INFO -  * Debugger PIN: 141-253-352
+2025-02-15 12:16:36,305 - werkzeug - INFO - 127.0.0.1 - - [15/Feb/2025 12:16:36] "GET / HTTP/1.1" 200 -
+2025-02-15 12:16:36,468 - werkzeug - INFO - 127.0.0.1 - - [15/Feb/2025 12:16:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-02-15 12:16:36,560 - werkzeug - INFO - 127.0.0.1 - - [15/Feb/2025 12:16:36] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-02-15 12:16:50,704 - werkzeug - INFO - 127.0.0.1 - - [15/Feb/2025 12:16:50] "POST /analyze HTTP/1.1" 200 -
+2025-02-15 12:16:55,308 - werkzeug - INFO - 127.0.0.1 - - [15/Feb/2025 12:16:55] "POST /analyze HTTP/1.1" 200 -
+2025-02-15 12:16:59,929 - feature_extractor - ERROR - Error getting HTML features: HTTPConnectionPool(host='googgle.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x00000211FB51F0D0>: Failed to resolve 'googgle.com' ([Errno 11001] getaddrinfo failed)"))
+2025-02-15 12:17:00,050 - werkzeug - INFO - 127.0.0.1 - - [15/Feb/2025 12:17:00] "POST /analyze HTTP/1.1" 200 -
+2025-02-15 12:17:09,276 - werkzeug - INFO - 127.0.0.1 - - [15/Feb/2025 12:17:09] "POST /analyze HTTP/1.1" 200 -
+2025-02-15 12:17:22,959 - feature_extractor - ERROR - Error getting HTML features: HTTPConnectionPool(host='192.168.1.1', port=80): Max retries exceeded with url: /login.php (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x00000211FB51F690>, 'Connection to 192.168.1.1 timed out. (connect timeout=5)'))
+2025-02-15 12:17:23,097 - werkzeug - INFO - 127.0.0.1 - - [15/Feb/2025 12:17:23] "POST /analyze HTTP/1.1" 200 -
+2025-02-15 12:17:27,698 - feature_extractor - ERROR - Error getting HTML features: HTTPSConnectionPool(host='subdomain.example.com', port=443): Max retries exceeded with url: /path/to/page?param=value (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000211FB5D9290>: Failed to resolve 'subdomain.example.com' ([Errno 11001] getaddrinfo failed)"))
+2025-02-15 12:17:27,798 - werkzeug - INFO - 127.0.0.1 - - [15/Feb/2025 12:17:27] "POST /analyze HTTP/1.1" 200 -
+2025-02-15 12:17:34,073 - feature_extractor - ERROR - Error getting HTML features: HTTPSConnectionPool(host='login.secure.banking.example.com', port=443): Max retries exceeded with url: /account (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000211FB51D090>: Failed to resolve 'login.secure.banking.example.com' ([Errno 11001] getaddrinfo failed)"))
+2025-02-15 12:17:34,183 - werkzeug - INFO - 127.0.0.1 - - [15/Feb/2025 12:17:34] "POST /analyze HTTP/1.1" 200 -
+2025-02-15 12:17:37,230 - werkzeug - INFO - 127.0.0.1 - - [15/Feb/2025 12:17:37] "[31m[1mPOST /analyze HTTP/1.1[0m" 400 -
+2025-02-15 12:18:34,215 - werkzeug - INFO -  * Detected change in 'C:\\Users\\nikhi\\OneDrive\\Desktop\\Phishing-Detection-Advanced\\app.py', reloading
+2025-02-15 12:18:34,260 - werkzeug - INFO -  * Detected change in 'C:\\Users\\nikhi\\OneDrive\\Desktop\\Phishing-Detection-Advanced\\app.py', reloading
+2025-02-15 12:18:34,542 - werkzeug - INFO -  * Restarting with stat
+2025-02-15 12:18:34,678 - werkzeug - INFO -  * Restarting with stat
+2025-02-15 12:18:38,215 - werkzeug - WARNING -  * Debugger is active!
+2025-02-15 12:18:38,230 - werkzeug - INFO -  * Debugger PIN: 438-716-506
+2025-02-15 12:18:38,367 - werkzeug - WARNING -  * Debugger is active!
+2025-02-15 12:18:38,379 - werkzeug - INFO -  * Debugger PIN: 141-253-352
+2025-02-15 12:18:49,747 - werkzeug - INFO -  * Detected change in 'C:\\Users\\nikhi\\OneDrive\\Desktop\\Phishing-Detection-Advanced\\train_model.py', reloading
+2025-02-15 12:18:49,779 - werkzeug - INFO -  * Detected change in 'C:\\Users\\nikhi\\OneDrive\\Desktop\\Phishing-Detection-Advanced\\train_model.py', reloading
+2025-02-15 12:18:50,115 - werkzeug - INFO -  * Restarting with stat
+2025-02-15 12:18:50,155 - werkzeug - INFO -  * Restarting with stat
+2025-02-15 12:18:53,576 - werkzeug - WARNING -  * Debugger is active!
+2025-02-15 12:18:53,589 - werkzeug - INFO -  * Debugger PIN: 141-253-352
+2025-02-15 12:18:53,662 - werkzeug - WARNING -  * Debugger is active!
+2025-02-15 12:18:53,675 - werkzeug - INFO -  * Debugger PIN: 438-716-506
+2025-02-15 12:19:19,725 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.137.208:5000
+2025-02-15 12:19:19,726 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-15 12:19:19,730 - werkzeug - INFO -  * Restarting with stat
+2025-02-15 12:19:23,262 - werkzeug - WARNING -  * Debugger is active!
+2025-02-15 12:19:23,274 - werkzeug - INFO -  * Debugger PIN: 438-716-506
+2025-02-15 12:19:33,808 - werkzeug - INFO - 192.168.137.208 - - [15/Feb/2025 12:19:33] "GET / HTTP/1.1" 200 -
+2025-02-15 12:19:34,051 - werkzeug - INFO - 192.168.137.208 - - [15/Feb/2025 12:19:34] "GET /static/style.css HTTP/1.1" 200 -
+2025-02-15 12:19:34,076 - werkzeug - INFO - 192.168.137.208 - - [15/Feb/2025 12:19:34] "GET /static/script.js HTTP/1.1" 200 -
+2025-02-15 12:19:34,746 - werkzeug - INFO - 192.168.137.208 - - [15/Feb/2025 12:19:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-15 12:19:40,861 - feature_extractor - ERROR - Error getting domain features: No match for "COM-REDIRECT@VALIMAIL.COM".
+>>> Last update of whois database: 2025-02-15T06:49:24Z <<<
+
+NOTICE: The expiration date displayed in this record is the date the
+registrar's sponsorship of the domain name registration in the registry is
+currently set to expire. This date does not necessarily reflect the expiration
+date of the domain name registrant's agreement with the sponsoring
+registrar.  Users may consult the sponsoring registrar's Whois database to
+view the registrar's reported date of expiration for this registration.
+
+TERMS OF USE: You are not authorized to access or query our Whois
+database through the use of electronic processes that are high-volume and
+automated except as reasonably necessary to register domain names or
+modify existing registrations; the Data in VeriSign Global Registry
+Services' ("VeriSign") Whois database is provided by VeriSign for
+information purposes only, and to assist persons in obtaining information
+about or related to a domain name registration record. VeriSign does not
+guarantee its accuracy. By submitting a Whois query, you agree to abide
+by the following terms of use: You agree that you may use this Data only
+for lawful purposes and that under no circumstances will you use this Data
+to: (1) allow, enable, or otherwise support the transmission of mass
+unsolicited, commercial advertising or solicitations via e-mail, telephone,
+or facsimile; or (2) enable high volume, automated, electronic processes
+that apply to VeriSign (or its computer systems). The compilation,
+repackaging, dissemination or other use of this Data is expressly
+prohibited without the prior written consent of VeriSign. You agree not to
+use electronic processes that are automated and high-volume to access or
+query the Whois database except as reasonably necessary to register
+domain names or modify existing registrations. VeriSign reserves the right
+to restrict your access to the Whois database in its sole discretion to ensure
+operational stability.  VeriSign may restrict or terminate your access to the
+Whois database for failure to abide by these terms of use. VeriSign
+reserves the right to modify these terms at any time.
+
+The Registry database contains ONLY .COM, .NET, .EDU domains and
+Registrars.
+
+2025-02-15 12:19:41,692 - werkzeug - INFO - 192.168.137.208 - - [15/Feb/2025 12:19:41] "POST /analyze HTTP/1.1" 200 -
+2025-02-15 12:19:56,864 - werkzeug - INFO - 192.168.137.208 - - [15/Feb/2025 12:19:56] "POST /analyze HTTP/1.1" 200 -
+2025-02-15 12:21:15,925 - werkzeug - INFO - 192.168.137.208 - - [15/Feb/2025 12:21:15] "POST /analyze HTTP/1.1" 200 -
+2025-02-15 12:21:58,105 - werkzeug - INFO - 192.168.137.208 - - [15/Feb/2025 12:21:58] "POST /analyze HTTP/1.1" 200 -
+2025-02-15 12:23:03,896 - werkzeug - INFO -  * Detected change in 'C:\\Users\\nikhi\\OneDrive\\Desktop\\Phishing-Detection-Advanced\\train_model.py', reloading
+2025-02-15 12:23:03,985 - werkzeug - INFO -  * Detected change in 'C:\\Users\\nikhi\\OneDrive\\Desktop\\Phishing-Detection-Advanced\\train_model.py', reloading
+2025-02-15 12:23:04,126 - werkzeug - INFO -  * Detected change in 'C:\\Users\\nikhi\\OneDrive\\Desktop\\Phishing-Detection-Advanced\\train_model.py', reloading
+2025-02-15 12:23:04,377 - werkzeug - INFO -  * Restarting with stat
+2025-02-15 12:23:04,379 - werkzeug - INFO -  * Restarting with stat
+2025-02-15 12:23:04,509 - werkzeug - INFO -  * Restarting with stat
+2025-02-15 12:23:08,426 - werkzeug - WARNING -  * Debugger is active!
+2025-02-15 12:23:08,426 - werkzeug - WARNING -  * Debugger is active!
+2025-02-15 12:23:08,435 - werkzeug - WARNING -  * Debugger is active!
+2025-02-15 12:23:08,441 - werkzeug - INFO -  * Debugger PIN: 438-716-506
+2025-02-15 12:23:08,443 - werkzeug - INFO -  * Debugger PIN: 438-716-506
+2025-02-15 12:23:08,447 - werkzeug - INFO -  * Debugger PIN: 141-253-352
+2025-02-15 12:23:40,524 - werkzeug - INFO - 192.168.137.208 - - [15/Feb/2025 12:23:40] "GET / HTTP/1.1" 200 -
+2025-02-15 12:23:40,713 - werkzeug - INFO - 192.168.137.208 - - [15/Feb/2025 12:23:40] "POST /analyze HTTP/1.1" 200 -
+2025-02-15 12:24:00,654 - werkzeug - INFO - 192.168.137.208 - - [15/Feb/2025 12:24:00] "POST /analyze HTTP/1.1" 200 -
+2025-02-15 12:26:03,633 - werkzeug - INFO -  * Detected change in 'C:\\Users\\nikhi\\OneDrive\\Desktop\\Phishing-Detection-Advanced\\app.py', reloading
+2025-02-15 12:26:03,801 - werkzeug - INFO -  * Detected change in 'C:\\Users\\nikhi\\OneDrive\\Desktop\\Phishing-Detection-Advanced\\app.py', reloading
+2025-02-15 12:26:03,858 - werkzeug - INFO -  * Detected change in 'C:\\Users\\nikhi\\OneDrive\\Desktop\\Phishing-Detection-Advanced\\app.py', reloading
+2025-02-15 12:26:04,046 - werkzeug - INFO -  * Restarting with stat
+2025-02-15 12:26:04,234 - werkzeug - INFO -  * Restarting with stat
+2025-02-15 12:26:04,262 - werkzeug - INFO -  * Restarting with stat
+2025-02-15 12:26:08,615 - werkzeug - WARNING -  * Debugger is active!
+2025-02-15 12:26:08,615 - werkzeug - WARNING -  * Debugger is active!
+2025-02-15 12:26:08,626 - werkzeug - INFO -  * Debugger PIN: 438-716-506
+2025-02-15 12:26:08,626 - werkzeug - INFO -  * Debugger PIN: 438-716-506
+2025-02-15 12:26:08,629 - werkzeug - INFO -  * Debugger PIN: 141-253-352
+2025-02-15 12:26:26,154 - werkzeug - INFO -  * Detected change in 'C:\\Users\\nikhi\\OneDrive\\Desktop\\Phishing-Detection-Advanced\\app.py', reloading
+2025-02-15 12:26:26,375 - werkzeug - INFO -  * Detected change in 'C:\\Users\\nikhi\\OneDrive\\Desktop\\Phishing-Detection-Advanced\\app.py', reloading
+2025-02-15 12:26:26,415 - werkzeug - INFO -  * Detected change in 'C:\\Users\\nikhi\\OneDrive\\Desktop\\Phishing-Detection-Advanced\\app.py', reloading
+2025-02-15 12:26:26,702 - werkzeug - INFO -  * Restarting with stat
+2025-02-15 12:26:26,905 - werkzeug - INFO -  * Restarting with stat
+2025-02-15 12:26:26,980 - werkzeug - INFO -  * Restarting with stat
+2025-02-15 12:26:31,050 - werkzeug - WARNING -  * Debugger is active!
+2025-02-15 12:26:31,065 - werkzeug - INFO -  * Debugger PIN: 438-716-506
+2025-02-15 12:26:31,104 - werkzeug - WARNING -  * Debugger is active!
+2025-02-15 12:26:31,121 - werkzeug - INFO -  * Debugger PIN: 141-253-352
+2025-02-15 12:26:31,137 - werkzeug - WARNING -  * Debugger is active!
+2025-02-15 12:26:31,150 - werkzeug - INFO -  * Debugger PIN: 438-716-506
+2025-02-15 12:26:33,339 - werkzeug - INFO -  * Detected change in 'C:\\Users\\nikhi\\OneDrive\\Desktop\\Phishing-Detection-Advanced\\train_model.py', reloading
+2025-02-15 12:26:33,399 - werkzeug - INFO -  * Detected change in 'C:\\Users\\nikhi\\OneDrive\\Desktop\\Phishing-Detection-Advanced\\train_model.py', reloading
+2025-02-15 12:26:33,450 - werkzeug - INFO -  * Detected change in 'C:\\Users\\nikhi\\OneDrive\\Desktop\\Phishing-Detection-Advanced\\train_model.py', reloading
+2025-02-15 12:26:33,728 - werkzeug - INFO -  * Restarting with stat
+2025-02-15 12:26:33,780 - werkzeug - INFO -  * Restarting with stat
+2025-02-15 12:26:33,845 - werkzeug - INFO -  * Restarting with stat
+2025-02-15 12:26:38,448 - werkzeug - WARNING -  * Debugger is active!
+2025-02-15 12:26:38,460 - werkzeug - WARNING -  * Debugger is active!
+2025-02-15 12:26:38,461 - werkzeug - INFO -  * Debugger PIN: 141-253-352
+2025-02-15 12:26:38,476 - werkzeug - INFO -  * Debugger PIN: 438-716-506
+2025-02-15 12:26:38,515 - werkzeug - WARNING -  * Debugger is active!
+2025-02-15 12:26:38,533 - werkzeug - INFO -  * Debugger PIN: 438-716-506
+2025-02-20 11:30:47,235 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.95.29:5000
+2025-02-20 11:30:47,238 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-20 11:30:47,257 - werkzeug - INFO -  * Restarting with stat
+2025-02-20 11:30:50,737 - werkzeug - WARNING -  * Debugger is active!
+2025-02-20 11:30:50,751 - werkzeug - INFO -  * Debugger PIN: 141-253-352
+2025-02-20 11:30:55,449 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 11:30:55] "GET / HTTP/1.1" 200 -
+2025-02-20 11:30:55,708 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 11:30:55] "GET /static/script.js HTTP/1.1" 200 -
+2025-02-20 11:30:55,717 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 11:30:55] "GET /static/style.css HTTP/1.1" 200 -
+2025-02-20 11:31:24,176 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 11:31:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-20 11:47:22,264 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.137.208:5000
+2025-02-20 11:47:22,266 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-20 11:47:22,271 - werkzeug - INFO -  * Restarting with stat
+2025-02-20 11:47:25,476 - werkzeug - WARNING -  * Debugger is active!
+2025-02-20 11:47:25,487 - werkzeug - INFO -  * Debugger PIN: 141-253-352
+2025-02-20 11:48:19,719 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 11:48:19] "GET / HTTP/1.1" 200 -
+2025-02-20 11:48:19,954 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 11:48:19] "GET /static/style.css HTTP/1.1" 200 -
+2025-02-20 11:48:19,954 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 11:48:19] "GET /static/script.js HTTP/1.1" 200 -
+2025-02-20 11:48:20,835 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 11:48:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-20 11:48:26,117 - feature_extractor - ERROR - Error getting domain features: No match for "COM-REDIRECT@VALIMAIL.COM".
+>>> Last update of whois database: 2025-02-20T06:18:16Z <<<
+
+NOTICE: The expiration date displayed in this record is the date the
+registrar's sponsorship of the domain name registration in the registry is
+currently set to expire. This date does not necessarily reflect the expiration
+date of the domain name registrant's agreement with the sponsoring
+registrar.  Users may consult the sponsoring registrar's Whois database to
+view the registrar's reported date of expiration for this registration.
+
+TERMS OF USE: You are not authorized to access or query our Whois
+database through the use of electronic processes that are high-volume and
+automated except as reasonably necessary to register domain names or
+modify existing registrations; the Data in VeriSign Global Registry
+Services' ("VeriSign") Whois database is provided by VeriSign for
+information purposes only, and to assist persons in obtaining information
+about or related to a domain name registration record. VeriSign does not
+guarantee its accuracy. By submitting a Whois query, you agree to abide
+by the following terms of use: You agree that you may use this Data only
+for lawful purposes and that under no circumstances will you use this Data
+to: (1) allow, enable, or otherwise support the transmission of mass
+unsolicited, commercial advertising or solicitations via e-mail, telephone,
+or facsimile; or (2) enable high volume, automated, electronic processes
+that apply to VeriSign (or its computer systems). The compilation,
+repackaging, dissemination or other use of this Data is expressly
+prohibited without the prior written consent of VeriSign. You agree not to
+use electronic processes that are automated and high-volume to access or
+query the Whois database except as reasonably necessary to register
+domain names or modify existing registrations. VeriSign reserves the right
+to restrict your access to the Whois database in its sole discretion to ensure
+operational stability.  VeriSign may restrict or terminate your access to the
+Whois database for failure to abide by these terms of use. VeriSign
+reserves the right to modify these terms at any time.
+
+The Registry database contains ONLY .COM, .NET, .EDU domains and
+Registrars.
+
+2025-02-20 11:48:28,546 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 11:48:28] "POST /analyze HTTP/1.1" 200 -
+2025-02-20 11:54:15,801 - feature_extractor - ERROR - Error getting HTML features: HTTPSConnectionPool(host='www.amazon.in', port=443): Read timed out. (read timeout=5)
+2025-02-20 11:54:15,987 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 11:54:15] "POST /analyze HTTP/1.1" 200 -
+2025-02-20 11:54:32,923 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 11:54:32] "POST /analyze HTTP/1.1" 200 -
+2025-02-20 11:54:45,367 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 11:54:45] "POST /analyze HTTP/1.1" 200 -
+2025-02-20 12:08:49,439 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 12:08:49] "[31m[1mPOST /analyze HTTP/1.1[0m" 400 -
+2025-02-20 12:09:09,729 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 12:09:09] "[31m[1mPOST /analyze HTTP/1.1[0m" 400 -
+2025-02-20 12:09:48,379 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 12:09:48] "POST /analyze HTTP/1.1" 200 -
+2025-02-20 12:10:02,116 - feature_extractor - ERROR - Error getting HTML features: HTTPSConnectionPool(host='onlinenotepad.org', port=443): Read timed out.
+2025-02-20 12:10:02,312 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 12:10:02] "POST /analyze HTTP/1.1" 200 -
+2025-02-20 12:10:02,940 - feature_extractor - ERROR - Error getting HTML features: HTTPSConnectionPool(host='chatgpt.com', port=443): Read timed out.
+2025-02-20 12:10:02,946 - __main__ - ERROR - Error making prediction: X has 34 features, but RandomForestClassifier is expecting 30 features as input.
+2025-02-20 12:10:02,947 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 12:10:02] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+2025-02-20 12:10:03,598 - feature_extractor - ERROR - Error getting HTML features: HTTPSConnectionPool(host='onlinenotepad.org', port=443): Read timed out.
+2025-02-20 12:10:03,605 - __main__ - ERROR - Error making prediction: X has 38 features, but RandomForestClassifier is expecting 30 features as input.
+2025-02-20 12:10:03,607 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 12:10:03] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+2025-02-20 12:10:09,189 - feature_extractor - ERROR - Error getting HTML features: HTTPSConnectionPool(host='chatgpt.com', port=443): Read timed out. (read timeout=5)
+2025-02-20 12:10:09,192 - __main__ - ERROR - Error making prediction: X has 44 features, but RandomForestClassifier is expecting 30 features as input.
+2025-02-20 12:10:09,194 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 12:10:09] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+2025-02-20 12:10:29,524 - feature_extractor - ERROR - Error getting HTML features: HTTPSConnectionPool(host='onlinenotepad.org', port=443): Read timed out. (read timeout=5)
+2025-02-20 12:10:29,697 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 12:10:29] "POST /analyze HTTP/1.1" 200 -
+2025-02-20 12:10:32,293 - feature_extractor - ERROR - Error getting HTML features: HTTPSConnectionPool(host='onlinenotepad.org', port=443): Read timed out. (read timeout=5)
+2025-02-20 12:10:32,297 - __main__ - ERROR - Error making prediction: X has 34 features, but RandomForestClassifier is expecting 30 features as input.
+2025-02-20 12:10:32,298 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 12:10:32] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+2025-02-20 12:10:50,365 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 12:10:50] "POST /analyze HTTP/1.1" 200 -
+2025-02-20 12:11:20,490 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 12:11:20] "POST /analyze HTTP/1.1" 200 -
+2025-02-20 12:11:27,707 - feature_extractor - ERROR - Error getting HTML features: HTTPSConnectionPool(host='onlinenotepad.org', port=443): Read timed out. (read timeout=5)
+2025-02-20 12:11:27,888 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 12:11:27] "POST /analyze HTTP/1.1" 200 -
+2025-02-20 12:11:39,854 - __main__ - ERROR - Error making prediction: X has 36 features, but RandomForestClassifier is expecting 30 features as input.
+2025-02-20 12:11:39,854 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 12:11:39] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+2025-02-20 12:11:58,966 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 12:11:58] "POST /analyze HTTP/1.1" 200 -
+2025-02-20 12:12:42,516 - feature_extractor - ERROR - Error getting HTML features: HTTPSConnectionPool(host='onlinenotepad.org', port=443): Read timed out. (read timeout=5)
+2025-02-20 12:12:42,710 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 12:12:42] "POST /analyze HTTP/1.1" 200 -
+2025-02-20 12:23:40,254 - feature_extractor - ERROR - Error getting HTML features: HTTPSConnectionPool(host='chatgpt.com', port=443): Max retries exceeded with url: /c/67b6b5bd-9708-8003-a38c-c828a455a819 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001D330E71B90>: Failed to resolve 'chatgpt.com' ([Errno 11001] getaddrinfo failed)"))
+2025-02-20 12:23:40,433 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 12:23:40] "POST /analyze HTTP/1.1" 200 -
+2025-02-20 12:24:20,828 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 12:24:20] "POST /analyze HTTP/1.1" 200 -
+2025-02-20 12:28:09,444 - feature_extractor - ERROR - Error getting domain features: No match for "COM-REDIRECT@VALIMAIL.COM".
+>>> Last update of whois database: 2025-02-20T06:57:59Z <<<
+
+NOTICE: The expiration date displayed in this record is the date the
+registrar's sponsorship of the domain name registration in the registry is
+currently set to expire. This date does not necessarily reflect the expiration
+date of the domain name registrant's agreement with the sponsoring
+registrar.  Users may consult the sponsoring registrar's Whois database to
+view the registrar's reported date of expiration for this registration.
+
+TERMS OF USE: You are not authorized to access or query our Whois
+database through the use of electronic processes that are high-volume and
+automated except as reasonably necessary to register domain names or
+modify existing registrations; the Data in VeriSign Global Registry
+Services' ("VeriSign") Whois database is provided by VeriSign for
+information purposes only, and to assist persons in obtaining information
+about or related to a domain name registration record. VeriSign does not
+guarantee its accuracy. By submitting a Whois query, you agree to abide
+by the following terms of use: You agree that you may use this Data only
+for lawful purposes and that under no circumstances will you use this Data
+to: (1) allow, enable, or otherwise support the transmission of mass
+unsolicited, commercial advertising or solicitations via e-mail, telephone,
+or facsimile; or (2) enable high volume, automated, electronic processes
+that apply to VeriSign (or its computer systems). The compilation,
+repackaging, dissemination or other use of this Data is expressly
+prohibited without the prior written consent of VeriSign. You agree not to
+use electronic processes that are automated and high-volume to access or
+query the Whois database except as reasonably necessary to register
+domain names or modify existing registrations. VeriSign reserves the right
+to restrict your access to the Whois database in its sole discretion to ensure
+operational stability.  VeriSign may restrict or terminate your access to the
+Whois database for failure to abide by these terms of use. VeriSign
+reserves the right to modify these terms at any time.
+
+The Registry database contains ONLY .COM, .NET, .EDU domains and
+Registrars.
+
+2025-02-20 12:28:10,431 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 12:28:10] "POST /analyze HTTP/1.1" 200 -
