@@ -13,53 +13,36 @@ A modern web application that uses machine learning to detect potential phishing
 - Health check endpoint
 
 ## Tech Stack
--Frontend
 
-HTML5 – Structure of the web interface
+**Frontend**
+- HTML5 – Structure of the web interface
+- CSS3 – Styling and responsive design
+- JavaScript (ES6) – Client-side interactivity and API communication
 
-CSS3 – Styling and responsive design
+**Backend**
+- Python 3.8+ – Core programming language
+- Flask – Lightweight web framework for API and server-side logic
+- Flask-Dotenv / python-dotenv – Environment variable management
 
-JavaScript (ES6) – Client-side interactivity and API communication
+**Machine Learning**
+- Scikit-learn – Machine learning model training and inference
+- Joblib – Model serialization and loading
+- NumPy – Numerical computations
+- Pandas – Data processing and feature handling
 
--Backend
+**Model & Feature Engineering**
+- Custom Feature Extraction Module – URL-based feature engineering
+- Supervised ML Model – Phishing vs Legitimate URL classification
 
-Python 3.8+ – Core programming language
+**Development & Tooling**
+- pip – Dependency management
+- Virtualenv – Isolated Python environment
+- Logging (Python logging module) – Application and prediction logs
 
-Flask – Lightweight web framework for API and server-side logic
-
-Flask-Dotenv / python-dotenv – Environment variable management
-
--Machine Learning
-
-Scikit-learn – Machine learning model training and inference
-
-Joblib – Model serialization and loading
-
-NumPy – Numerical computations
-
-Pandas – Data processing and feature handling
-
--Model & Feature Engineering
-
-Custom Feature Extraction Module – URL-based feature engineering
-
-Supervised ML Model – Phishing vs Legitimate URL classification
-
--Development & Tooling
-
-pip – Dependency management
-
-Virtualenv – Isolated Python environment
-
-Logging (Python logging module) – Application and prediction logs
-
--Deployment & Security
-
-REST API – JSON-based API endpoints
-
-Environment Variables (.env) – Secure configuration
-
-Health Check Endpoint – Service and model monitoring
+**Deployment & Security**
+- REST API – JSON-based API endpoints
+- Environment Variables (.env) – Secure configuration
+- Health Check Endpoint – Service and model monitoring
 ## Prerequisites
 
 - Python 3.8+
