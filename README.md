@@ -12,6 +12,37 @@ A modern web application that uses machine learning to detect potential phishing
 - Comprehensive logging
 - Health check endpoint
 
+## Tech Stack
+Frontend
+-HTML5 – Markup for the user interface
+-CSS3 – Responsive and modern styling
+-JavaScript (ES6) – Client-side logic and API interaction
+
+Backend
+-Python 3.8+ – Core backend programming language
+-Flask – Lightweight web framework for routing and REST APIs
+-python-dotenv – Environment variable and configuration management
+
+Machine Learning
+-Scikit-learn – Machine learning model for phishing detection
+-Joblib – Model serialization and loading
+-NumPy – Numerical computations
+-Pandas – Data preprocessing and feature handling
+
+Feature Engineering
+-Custom URL Feature Extractor – Extracts lexical and structural URL features
+-Supervised Classification Model – Classifies phishing vs legitimate URLs
+
+Development & Tooling
+-pip – Dependency management
+-Virtual Environment (venv) – Isolated Python development environment
+-Python Logging – Request, prediction, and error logging
+
+API & Security
+-RESTful API – JSON-based endpoints for URL analysis
+-Input Validation & Sanitization – Protection against malformed input
+-Health Check Endpoint – Service and model availability monitoring
+
 ## Prerequisites
 
 - Python 3.8+
