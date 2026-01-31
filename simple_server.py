@@ -14,7 +14,7 @@ def analyze_url(url):
     try:
         parsed_url = urllib.parse.urlparse(url)
         
-        # Check for IP address in domain
+        # Check for IP address in domain..
         ip_pattern = r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}'
         if re.match(ip_pattern, parsed_url.netloc):
             score += 0.4
