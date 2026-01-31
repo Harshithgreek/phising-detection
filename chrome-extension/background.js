@@ -24,16 +24,19 @@ function keepAlive() {
 
 // Function to show popup notification
 function showNotification(result, type) {
-  const title = result.isPhishing ? 'Warning: Potential Phishing Detected!' : 'Security Check Passed';
-  const iconPath = result.isPhishing ? 'icons/warning.png' : 'icons/safe.png';
-  
+  const isSpamOrPhishing = result.isPhishing || result.isSpam;
+  const title = isSpamOrPhishing ? 'Warning: Potential Phishing/Spam Detected!' : 'Security Check Passed';
+  const iconPath = 'icons/icon48.png';
+
   let message = '';
-  if (result.isPhishing) {
+  if (isSpamOrPhishing) {
     message = `Risk Level: ${result.riskLevel.toUpperCase()}\n`;
     message += `Confidence: ${Math.round(result.confidence)}%\n`;
-    message += 'Reasons:\n' + result.reasons.join('\n');
+    if (result.reasons && result.reasons.length > 0) {
+      message += 'Reasons:\n' + result.reasons.join('\n');
+    }
   } else {
-    message = 'No phishing threats detected.';
+    message = 'No phishing/spam threats detected.';
   }
 
   chrome.notifications.create({
@@ -41,15 +44,15 @@ function showNotification(result, type) {
     iconUrl: iconPath,
     title: title,
     message: message,
-    priority: result.isPhishing ? 2 : 0,
-    requireInteraction: result.isPhishing
+    priority: isSpamOrPhishing ? 2 : 0,
+    requireInteraction: isSpamOrPhishing
   });
 }
 
 // Function to handle API errors gracefully and retry if needed
 async function fetchWithRetry(url, options, retries = 3, delay = 2000) {
   let lastError;
-  
+
   for (let i = 0; i < retries; i++) {
     try {
       const response = await fetch(url, options);
@@ -66,7 +69,7 @@ async function fetchWithRetry(url, options, retries = 3, delay = 2000) {
       }
     }
   }
-  
+
   throw lastError;
 }
 
@@ -74,11 +77,11 @@ async function fetchWithRetry(url, options, retries = 3, delay = 2000) {
 async function analyzeUrl(url) {
   try {
     debugLog('Starting URL analysis for:', url);
-    
+
     if (!url) {
       throw new Error('No URL provided');
     }
-    
+
     const response = await fetchWithRetry(API_ENDPOINTS.url, {
       method: 'POST',
       headers: {
@@ -86,7 +89,7 @@ async function analyzeUrl(url) {
       },
       body: JSON.stringify({ url })
     });
-    
+
     debugLog('Raw API response:', response);
     return {
       isPhishing: Boolean(response.isPhishing),
@@ -105,11 +108,11 @@ async function analyzeUrl(url) {
 async function analyzeEmail(emailData) {
   try {
     debugLog('Starting email analysis for:', emailData);
-    
+
     if (!emailData || !emailData.subject || !emailData.sender || !emailData.content) {
       throw new Error('Invalid email data: Missing required fields');
     }
-    
+
     const response = await fetchWithRetry(API_ENDPOINTS.email, {
       method: 'POST',
       headers: {
@@ -122,10 +125,11 @@ async function analyzeEmail(emailData) {
         headers: emailData.headers || {}
       })
     });
-    
+
     debugLog('Raw API response:', response);
     return {
       isPhishing: Boolean(response.isPhishing),
+      isSpam: Boolean(response.isSpam),
       confidence: Number(response.confidence) || 0,
       reasons: Array.isArray(response.reasons) ? response.reasons : [],
       riskLevel: response.riskLevel || 'unknown'
@@ -139,14 +143,14 @@ async function analyzeEmail(emailData) {
 // Initialize message listeners with async wrapper
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   debugLog('Received message:', request);
-  
+
   // Keep service worker alive
   keepAlive();
-  
+
   const handleRequest = async () => {
     try {
       let result;
-      
+
       if (request.action === 'analyzeUrl') {
         result = await analyzeUrl(request.url);
         if (result.isPhishing) {
@@ -154,26 +158,38 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         }
       } else if (request.action === 'analyzeEmail') {
         result = await analyzeEmail(request.emailData);
-        if (result.isPhishing) {
+        if (result.isPhishing || result.isSpam) {
           showNotification(result, 'email');
         }
+      } else if (request.action === 'showNotification') {
+        // Handle notification request from content script
+        chrome.notifications.create({
+          type: 'basic',
+          iconUrl: 'icons/icon48.png',
+          title: request.title || 'Email Scanner Alert',
+          message: request.message || 'Alert from email scanner',
+          priority: 2,
+          requireInteraction: true
+        });
+        return { success: true };
       } else {
         throw new Error('Unknown action');
       }
-      
+
       return result;
     } catch (error) {
       debugLog('Error handling request:', error);
       return {
         error: error.message || 'Analysis failed',
         isPhishing: false,
+        isSpam: false,
         confidence: 0,
         reasons: [],
         riskLevel: 'unknown'
       };
     }
   };
-  
+
   // Handle the request and keep the message channel open
   handleRequest().then(sendResponse);
   return true; // Will respond asynchronously

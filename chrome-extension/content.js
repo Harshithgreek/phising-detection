@@ -44,7 +44,7 @@ function createUrlWarningOverlay(element, result) {
   overlay.style.alignItems = 'center';
   overlay.style.justifyContent = 'center';
   overlay.style.pointerEvents = 'none';
-  
+
   const warning = document.createElement('div');
   warning.style.backgroundColor = '#ffebee';
   warning.style.color = '#c62828';
@@ -53,9 +53,9 @@ function createUrlWarningOverlay(element, result) {
   warning.style.fontSize = '12px';
   warning.style.fontWeight = 'bold';
   warning.textContent = `⚠️ Potential Phishing URL (${Math.round(result.confidence)}% confidence)`;
-  
+
   overlay.appendChild(warning);
-  
+
   const parent = element.parentElement;
   if (parent) {
     parent.style.position = 'relative';
@@ -67,15 +67,15 @@ function createUrlWarningOverlay(element, result) {
 async function analyzePageUrls() {
   const links = document.getElementsByTagName('a');
   debugLog(`Found ${links.length} links on page`);
-  
+
   for (const link of links) {
     if (link.hasAttribute('data-analyzed')) continue;
-    
+
     const url = link.href;
     if (!url || url.startsWith('javascript:')) continue;
-    
+
     link.setAttribute('data-analyzed', 'true');
-    
+
     try {
       const result = await new Promise((resolve) => {
         chrome.runtime.sendMessage({
@@ -97,12 +97,12 @@ async function analyzePageUrls() {
           resolve(response);
         });
       });
-      
+
       debugLog('URL analysis result:', result);
-      
+
       if (result.isPhishing) {
         createUrlWarningOverlay(link, result);
-        
+
         // Add warning styles to the link
         link.style.color = '#c62828';
         link.style.backgroundColor = '#ffebee';
@@ -153,6 +153,132 @@ function extractEmailData(emailElement, provider) {
   }
 }
 
+// Function to show alert notification for spam emails
+function showSpamAlert(analysisResult) {
+  const result = analysisResult || {};
+
+  if (result.isSpam || result.isPhishing) {
+    const confidence = Math.round(result.confidence || 0);
+    const riskLevel = result.riskLevel || 'unknown';
+    const reasons = result.reasons || [];
+
+    // Create custom alert overlay
+    const alertOverlay = document.createElement('div');
+    alertOverlay.id = 'spam-alert-overlay';
+    alertOverlay.style.cssText = `
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 999999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 0.3s;
+    `;
+
+    const alertBox = document.createElement('div');
+    alertBox.style.cssText = `
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 500px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      animation: slideIn 0.3s;
+    `;
+
+    const iconStyle = riskLevel === 'high' ? '🚨' : '⚠️';
+    const colorStyle = riskLevel === 'high' ? '#d32f2f' : '#f57c00';
+
+    alertBox.innerHTML = `
+      <div style="text-align: center; margin-bottom: 20px;">
+        <div style="font-size: 64px; margin-bottom: 10px;">${iconStyle}</div>
+        <h2 style="color: ${colorStyle}; margin: 0; font-size: 24px; font-weight: bold;">
+          SPAM EMAIL DETECTED!
+        </h2>
+      </div>
+      <div style="background: #fff3e0; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+        <p style="margin: 0 0 10px 0; font-size: 16px; color: #333;">
+          <strong>Confidence:</strong> ${confidence}%
+        </p>
+        <p style="margin: 0 0 10px 0; font-size: 16px; color: #333;">
+          <strong>Risk Level:</strong> <span style="color: ${colorStyle}; font-weight: bold;">${riskLevel.toUpperCase()}</span>
+        </p>
+        ${reasons.length > 0 ? `
+          <p style="margin: 0; font-size: 14px; color: #555;">
+            <strong>Reasons:</strong><br>
+            ${reasons.map(r => `• ${r}`).join('<br>')}
+          </p>
+        ` : ''}
+      </div>
+      <div style="background: #ffebee; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+        <p style="margin: 0; font-size: 14px; color: #c62828; line-height: 1.6;">
+          <strong>⚠️ Warning:</strong> This email may be a phishing attempt. Do not click on any links, 
+          download attachments, or provide personal information.
+        </p>
+      </div>
+      <button id="spam-alert-close" style="
+        width: 100%;
+        padding: 12px;
+        background: ${colorStyle};
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s;
+      " onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
+        I Understand - Close Alert
+      </button>
+    `;
+
+    alertOverlay.appendChild(alertBox);
+
+    // Add animations
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      @keyframes slideIn {
+        from { transform: translateY(-50px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+      }
+    `;
+    document.head.appendChild(style);
+
+    document.body.appendChild(alertOverlay);
+
+    // Close button handler
+    document.getElementById('spam-alert-close').addEventListener('click', () => {
+      alertOverlay.remove();
+    });
+
+    // Also send browser notification
+    chrome.runtime.sendMessage({
+      action: 'showNotification',
+      title: 'SPAM Email Detected!',
+      message: `Risk Level: ${riskLevel.toUpperCase()} | Confidence: ${confidence}%`,
+      type: 'error'
+    });
+
+    // Play alert sound (optional)
+    try {
+      const audio = new Audio('data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBinO7PKznkYJEFev5fCpWRoqGPu+vr+/v///AAAAAAAAAAAA==');
+      audio.volume = 0.3;
+      audio.play().catch(() => { });
+    } catch (e) {
+      debugLog('Could not play alert sound', e);
+    }
+
+    debugLog('Spam alert displayed');
+  }
+}
+
 // Function to create and insert the status indicator
 function createStatusIndicator(emailElement, analysisResult) {
   try {
@@ -160,11 +286,17 @@ function createStatusIndicator(emailElement, analysisResult) {
 
     const result = analysisResult || {
       isPhishing: false,
+      isSpam: false,
       confidence: 0,
       reasons: [],
       riskLevel: 'unknown',
       error: 'No analysis result'
     };
+
+    // Show alert popup for spam emails
+    if (result.isSpam || result.isPhishing) {
+      showSpamAlert(result);
+    }
 
     const indicator = document.createElement('div');
     indicator.style.padding = '5px 10px';
@@ -178,10 +310,11 @@ function createStatusIndicator(emailElement, analysisResult) {
       indicator.style.backgroundColor = '#fff3e0';
       indicator.style.color = '#e65100';
       indicator.textContent = `⚠️ Analysis Error: ${result.error || 'Unknown error'}`;
-    } else if (result.isPhishing) {
+    } else if (result.isPhishing || result.isSpam) {
       indicator.style.backgroundColor = '#ffebee';
       indicator.style.color = '#c62828';
-      indicator.textContent = `⚠️ Potential Phishing (${Math.round(result.confidence)}% confidence)`;
+      const type = result.isSpam ? 'Spam' : 'Phishing';
+      indicator.textContent = `⚠️ Potential ${type} (${Math.round(result.confidence)}% confidence)`;
       if (result.reasons && result.reasons.length > 0) {
         const reasonsList = document.createElement('div');
         reasonsList.style.fontSize = '11px';
@@ -213,7 +346,7 @@ async function analyzeSingleEmail(emailElement, provider) {
   try {
     debugLog('Starting single email analysis');
     const emailData = extractEmailData(emailElement, provider);
-    
+
     debugLog('Sending message to background script');
     return new Promise((resolve) => {
       chrome.runtime.sendMessage({
@@ -258,25 +391,25 @@ async function analyzeSingleEmail(emailElement, provider) {
 async function analyzeEmails() {
   try {
     debugLog('Starting email analysis');
-    
+
     const provider = getEmailProvider();
     if (!provider) {
       debugLog('No supported email provider detected');
       return;
     }
-    
+
     debugLog('Provider detected:', provider);
     const emails = document.querySelectorAll(EMAIL_PROVIDERS[provider].emailSelector);
     debugLog('Found emails:', emails.length);
-    
+
     for (const emailElement of emails) {
       if (emailElement.hasAttribute('data-analyzed')) {
         debugLog('Email already analyzed, skipping');
         continue;
       }
-      
+
       emailElement.setAttribute('data-analyzed', 'true');
-      
+
       try {
         const result = await analyzeSingleEmail(emailElement, provider);
         debugLog('Analysis result:', result);
@@ -300,12 +433,12 @@ async function analyzeEmails() {
 // Initialize when the page loads
 window.addEventListener('load', () => {
   debugLog('Page loaded, starting analysis');
-  
+
   // Analyze emails if we're on an email provider
   const provider = getEmailProvider();
   if (provider) {
     analyzeEmails();
-    
+
     // Set up observer for new emails
     const emailContainer = document.querySelector('div[role="main"]');
     if (emailContainer) {
@@ -314,17 +447,17 @@ window.addEventListener('load', () => {
         debugLog('New content detected, checking for emails');
         analyzeEmails();
       });
-      
+
       observer.observe(emailContainer, {
         childList: true,
         subtree: true
       });
     }
   }
-  
+
   // Analyze URLs on the page
   analyzePageUrls();
-  
+
   // Set up observer for dynamic content
   const observer = new MutationObserver((mutations) => {
     for (const mutation of mutations) {
@@ -334,7 +467,7 @@ window.addEventListener('load', () => {
       }
     }
   });
-  
+
   observer.observe(document.body, {
     childList: true,
     subtree: true

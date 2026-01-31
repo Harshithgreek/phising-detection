@@ -352,3 +352,24 @@ The Registry database contains ONLY .COM, .NET, .EDU domains and
 Registrars.
 
 2025-02-20 12:28:10,431 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 12:28:10] "POST /analyze HTTP/1.1" 200 -
+2026-01-31 19:18:40,766 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.107:5000
+2026-01-31 19:18:40,768 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-01-31 19:22:30,770 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 19:22:30] "GET /health HTTP/1.1" 200 -
+2026-01-31 19:22:41,084 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 19:22:41] "GET /health HTTP/1.1" 200 -
+2026-01-31 19:23:08,376 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 19:23:08] "GET / HTTP/1.1" 200 -
+2026-01-31 19:23:08,486 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 19:23:08] "GET / HTTP/1.1" 200 -
+2026-01-31 19:23:09,556 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 19:23:09] "GET /static/style.css HTTP/1.1" 200 -
+2026-01-31 19:23:09,927 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 19:23:09] "GET /static/script.js HTTP/1.1" 200 -
+2026-01-31 19:23:10,236 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 19:23:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-01-31 19:23:11,899 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 19:23:11] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-01-31 19:23:11,922 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 19:23:11] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2026-01-31 19:23:29,010 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 19:23:29] "POST /analyze HTTP/1.1" 200 -
+2026-01-31 19:46:08,555 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 19:46:08] "POST /analyze-email HTTP/1.1" 200 -
+2026-01-31 19:46:19,799 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 19:46:19] "POST /analyze-email HTTP/1.1" 200 -
+2026-01-31 19:46:29,754 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 19:46:29] "POST /analyze-email HTTP/1.1" 200 -
+2026-01-31 19:49:06,874 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 19:49:06] "POST /analyze-email HTTP/1.1" 200 -
+2026-01-31 19:49:27,671 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 19:49:27] "POST /analyze-email HTTP/1.1" 200 -
+2026-01-31 19:49:38,963 - werkzeug - INFO - 127.0.0.1 - - [31/Jan/2026 19:49:38] "POST /analyze-email HTTP/1.1" 200 -
